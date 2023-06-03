@@ -1,0 +1,18 @@
+.button {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  border: none;
+  box-shadow: 5px 5px 10px var(--secondary-color);
+}
+
+.button:hover {
+  transform: scale(1.01);
+  font-size: 15px;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
