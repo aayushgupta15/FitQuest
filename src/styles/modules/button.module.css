@@ -6,12 +6,13 @@
   cursor: pointer;
   border: none;
   box-shadow: 5px 5px 10px var(--secondary-color);
-  transition: transform 0.2s; /* Animation */
+  /* transition: transform 0.2s; Animation */
 }
 
 .button:hover {
-  transform: scale(1.01);
-  font-size: 15px;
+  border: 3px solid var(--black);
+  color: var(--white);
+  /* font-size: 15px; */
 }
 
 .primary {

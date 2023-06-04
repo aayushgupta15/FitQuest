@@ -1,5 +1,22 @@
 .nav__container {
   background-color: var(--secondary-color);
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav__container img {
+  position: absolute;
+  top: 3em;
+  left: 5em;
+  width: 7em;
+}
+
+.nav__container ul {
+  width: 30vw;
+  display: inline-flex;
+  justify-content: space-evenly;
 }
 
 .navbar {
@@ -9,14 +26,6 @@
   display: flex;
   /* justify-content: space-around; */
   align-items: center;
-}
-
-.navbar ul {
-  position: relative;
-  display: flex;
-  margin: 40px;
-  justify-content: space-between;
-  /* width: 30vw; */
 }
 
 .navbar a:hover {

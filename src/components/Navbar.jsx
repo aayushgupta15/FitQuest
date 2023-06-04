@@ -6,21 +6,22 @@ import logo from "../images/logo.jpg";
 function Navbar() {
   return (
     <nav className={style.nav__container}>
-      <div className={style.navbar}>
-        <img src={logo} alt="NA" />
-        <ul>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <Button type="button" value="Check BMI" variant="primary" />
-      </div>
+      <img src={logo} alt="NA" />
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#features">Features</a>
+        </li>
+        <li>
+          <a href="#service">Services</a>
+        </li>
+        <li>
+          <a href="#footer">Contact Us</a>
+        </li>
+      </ul>
+      <Button type="button" value="Check BMI" variant="primary" />
     </nav>
   );
 }

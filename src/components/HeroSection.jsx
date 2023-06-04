@@ -5,7 +5,7 @@ import hero from "../images/hero.webp";
 
 function HeroSection() {
   return (
-    <section className={style.container}>
+    <section className={style.container} id="home">
       <div className={style.right}>
         <h1>Get Fit with FitQuest's Experts</h1>
         <p>

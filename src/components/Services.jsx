@@ -6,9 +6,9 @@ import fit from "../images/fit.png";
 
 function Services() {
   return (
-    <section className={style.container}>
+    <section className={style.container} id="service">
       <h2>Services YOU can avail</h2>
-      <strong>______________</strong>
+      <hr />
       <div className={style.card__container}>
         <div className={style.card}>
           <img src={meditation} alt="NA" />

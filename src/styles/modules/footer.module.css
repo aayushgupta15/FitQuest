@@ -32,10 +32,15 @@
   margin-right: 5vw;
 }
 
-.center a {
+/* socials */
+.social {
   position: relative;
   top: 10vh;
   left: 25vw;
   color: var(--white);
+}
+
+.social a {
   font-size: larger;
+  color: var(--white);
 }

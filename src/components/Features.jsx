@@ -4,9 +4,9 @@ import gymMat from "../images/gymMat.png";
 
 function Features() {
   return (
-    <section className={style.container}>
+    <section className={style.container} id="features">
       <h2>Features & Benefits</h2>
-      <strong>______________</strong>
+      <hr />
       <div className={style.block__container}>
         {/* Features */}
         <div className={style.block}>

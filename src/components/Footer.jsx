@@ -1,41 +1,41 @@
 import React from "react";
 import style from "../styles/modules/footer.module.css";
 import logo from "../images/logo.jpg";
-import { BsGithub, BsLinkedin, BsMailbox, BsTwitter } from "react-icons/bs";
-import { TfiEmail } from "react-icons/tfi";
+import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { GrMail } from "react-icons/gr";
 
 function Footer() {
   return (
-    <footer className={style.center}>
+    <footer className={style.center} id="footer">
       {/* company name */}
       <div>
         <img src={logo} alt="NA" />
         <h4>FitQuest</h4>
-        <strong>Created by - Aayush Gupta</strong>
       </div>
 
       {/* social handles */}
       <div className={style.social}>
+        <p>Created by - Aayush Gupta</p>
+        <br />
         <ul>
           <li>
-            <a href="#">
+            <a href="https://www.twitter.com/aayu_sh15" target="_blank">
               <BsTwitter />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/aayu-sh15" target="_blank">
               <BsLinkedin />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://github.com/aayushgupta15" target="_blank">
               <BsGithub />
             </a>
           </li>
-          <a href="mailto:fitquest01@gmail.com">
-            <TfiEmail />
+          <a href="mailto:aayush61258@gmail.com">
+            <GrMail />
           </a>
-          <li></li>
         </ul>
       </div>
     </footer>
