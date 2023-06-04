@@ -5,8 +5,8 @@ import "./styles/GlobalStyles.css";
 import App from "./App";
 
 ReactDOM.render(
-  <div>
+  <main>
     <App />
-  </div>,
+  </main>,
   document.getElementById("root")
 );

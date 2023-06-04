@@ -21,8 +21,13 @@ font-family: 'Playfair Display', serif; */
 
 a {
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 ul li {
   list-style: none;
+}
+
+body {
+  color: var(--black);
 }

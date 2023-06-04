@@ -1,0 +1,17 @@
+.features {
+  margin: 15vh auto;
+  width: 75vw;
+}
+
+.features h3 {
+  text-align: center;
+  margin: 20px;
+}
+
+.features h4 {
+  padding: 10px;
+}
+
+.features ul li {
+  padding-bottom: 5px;
+}
