@@ -1,0 +1,40 @@
+/* .footer {
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+*/
+
+.center {
+  margin-top: 10vh;
+  height: 40vh;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.center img {
+  margin: 20px;
+  width: 75px;
+  height: 75px;
+}
+
+.center ul li {
+  display: inline;
+  margin-right: 5vw;
+}
+
+.center a {
+  position: relative;
+  top: 10vh;
+  left: 25vw;
+  color: var(--white);
+}
