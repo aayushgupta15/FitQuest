@@ -1,14 +1,16 @@
 import React from "react";
+import style from "../styles/modules/services.module.css";
 import meditation from "../images/meditation.png";
 import food from "../images/food.png";
 import fit from "../images/fit.png";
 
 function Services() {
   return (
-    <section>
-      <div>
-        <h3>Services YOU can avail</h3>
-        <div>
+    <section className={style.container}>
+      <h2>Services YOU can avail</h2>
+      <strong>______________</strong>
+      <div className={style.card__container}>
+        <div className={style.card}>
           <img src={meditation} alt="NA" />
           <h4>Zen Out with Yoga & Meditation</h4>
           <p>
@@ -17,7 +19,7 @@ function Services() {
             relaxed environment.
           </p>
         </div>
-        <div>
+        <div className={style.card}>
           <img src={food} alt="NA" />
           <h4>Food Coach: Eat Better, Feel Better</h4>
           <p>
@@ -25,7 +27,7 @@ function Services() {
             can help you create a plan that works for you and your lifestyle.
           </p>
         </div>
-        <div>
+        <div className={style.card}>
           <img src={fit} alt="NA" />
           <h4>Get Fit at FitQuest Gym!</h4>
           <p>

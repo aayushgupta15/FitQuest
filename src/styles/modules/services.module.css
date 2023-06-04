@@ -1,0 +1,54 @@
+.container {
+  margin-top: 15vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.container__color {
+  background-color: var(--secondary-color);
+}
+
+.card__container {
+  margin: 25px auto;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  min-width: 200px;
+  width: 30%;
+  border-radius: 1rem;
+  box-shadow: 2px 3px 12px var(--primary-color);
+  padding: 20px 10px;
+}
+
+.card:hover {
+  scale: 1.01;
+  cursor: pointer;
+}
+
+.card img {
+  width: 10vw;
+  height: 20vh;
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin: 10px auto;
+  text-align: justify;
+  width: 75%;
+}
+
+.input {
+  width: 50vw;
+  margin: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  padding: 15px;
+}
+
+#mail {
+  margin-top: 2rem;
+}

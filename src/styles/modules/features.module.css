@@ -1,17 +1,35 @@
-.features {
-  margin: 15vh auto;
-  width: 75vw;
-}
-
-.features h3 {
+.container {
+  background-color: var(--secondary-color);
+  margin-top: 7vh;
   text-align: center;
-  margin: 20px;
+  padding: 20px;
 }
 
-.features h4 {
-  padding: 10px;
+.block__container {
+  margin: 35px auto;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.features ul li {
-  padding-bottom: 5px;
+.block__container img {
+  width: 20vw;
+  height: 40vh;
+  margin-bottom: 15px;
+}
+
+.block {
+  border: 2px solid var(--primary-color);
+  min-width: 200px;
+  width: 30%;
+  height: 22rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: inset 2px 0 5px var(--primary-color);
+  text-align: justify;
+}
+
+.block ul li {
+  margin: 1rem;
 }

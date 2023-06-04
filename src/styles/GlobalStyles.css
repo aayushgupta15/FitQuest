@@ -2,7 +2,8 @@
 /* 
 font-family: 'Montserrat', sans-serif;
 font-family: 'Open Sans', sans-serif;
-font-family: 'Playfair Display', serif; */
+font-family: 'Playfair Display', serif; 
+*/
 
 *,
 ::after,
@@ -16,7 +17,7 @@ font-family: 'Playfair Display', serif; */
   --primary-color: rgb(124, 103, 241);
   --secondary-color: #f0f0f8;
   --white: #fdfdfd;
-  --black: #1e1515;
+  --black: #2b0849;
 }
 
 a {
@@ -29,4 +30,14 @@ ul li {
 
 body {
   color: var(--black);
+  overflow-x: hidden;
+}
+
+strong {
+  color: var(--black);
+  font-weight: bolder;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
 }
