@@ -8,12 +8,12 @@
   box-shadow: 5px 5px 10px var(--secondary-color);
 }
 
-.button:hover {
-  border: 3px solid var(--black);
-  color: var(--white);
-}
-
 .primary {
   background-color: var(--black);
   color: var(--white);
+}
+
+.primary:hover {
+  background-color: var(--primary-color);
+  /* color: var(--black); */
 }
