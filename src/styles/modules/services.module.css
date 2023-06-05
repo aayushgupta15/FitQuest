@@ -58,6 +58,13 @@
   margin-top: 1em;
 }
 
+.person img {
+  width: 40%;
+  background-color: var(--primary-color);
+  padding: 0.2em;
+  border-radius: 50%;
+}
+
 @media screen and (min-width: 500px) {
   .card__container {
     flex-direction: row;
@@ -66,9 +73,6 @@
 
   .card {
     width: 30%;
-    /* height: 27rem; */
-    /* width: 35%; */
-    /* margin-top: 3em; */
     border-radius: 1rem;
     box-shadow: 2px 3px 12px var(--primary-color);
     padding: 20px 10px;
