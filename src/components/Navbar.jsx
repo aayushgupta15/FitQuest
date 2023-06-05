@@ -7,9 +7,10 @@ function Navbar() {
   return (
     <nav>
       <div className={style.nav__container}>
-        <a href="#">
+        <div className="logo">
           <img src={logo} alt="NA" />
-        </a>
+        </div>
+        {/* <div className="link"> */}
         <ul>
           <li>
             <a href="#home">Home</a>
@@ -24,9 +25,10 @@ function Navbar() {
             <a href="#footer">Contact Us</a>
           </li>
         </ul>
-      </div>
-      <div className={style.button}>
-        <Button type="button" value="Check BMI" variant="primary" />
+        <div className={style.button}>
+          <Button type="button" value="Check BMI" variant="primary" />
+        </div>
+        {/* </div> */}
       </div>
     </nav>
   );

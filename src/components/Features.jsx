@@ -21,12 +21,14 @@ function Features() {
               professionals
             </li>
             <li>Fun and engaging exercise classes for all fitness levels</li>
-            <li>
+            {/* <li>
               Nutritional counselling and guidance to enhance overall health and
               wellness
-            </li>
+            </li> */}
           </ul>
         </div>
+
+        <img src={gymMat} alt="NA" />
 
         {/* Benefits */}
         <div className={style.block}>
@@ -39,7 +41,6 @@ function Features() {
             <li>Improved immune system function</li>
           </ul>
         </div>
-        <img src={gymMat} alt="NA" />
       </div>
     </section>
   );

@@ -1,8 +1,7 @@
 .container {
-  width: 75vw;
-  margin: 25px auto;
-  padding: 12px;
-  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 4vh;
 }
 
 .container h1 {
@@ -10,18 +9,18 @@
   font-size: 3em;
   font-weight: bold;
   line-height: 1em;
-  padding: 50px 0;
 }
 
 .container p {
-  width: 85%;
-  line-height: 1.2em;
-  margin-bottom: 20px;
+  width: 100%;
+  line-height: 1.3em;
+  margin: 20px auto;
 }
 
 .container img {
-  width: 40vw;
-  border-radius: 20px;
+  margin-top: 10vh;
+  width: 100%;
+  border-radius: 5%;
   box-shadow: 5px 5px 25px rgb(124, 103, 241);
 }
 
@@ -35,8 +34,20 @@
   min-width: 250px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   .container {
-    flex-wrap: wrap;
+    /* margin-top: 12vh; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container img {
+    width: 50%;
+  }
+
+  .container p {
+    width: 75%;
+    margin: 20px 0;
   }
 }
