@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "../styles/modules/navbar.module.css";
 import Button from "./Button";
 import logo from "../images/logo.jpg";
+import BMI from "./BMI";
 
 function Navbar() {
+  const [modalOpen, setModalOpen] = useEffect(false);
+
   return (
     <nav>
       <div className={style.nav__container}>
@@ -26,7 +29,13 @@ function Navbar() {
           </li>
         </ul>
         <div className={style.button}>
-          <Button type="button" value="Check BMI" variant="primary" />
+          <Button
+            type="button"
+            value="Check BMI"
+            variant="primary"
+            onClick={() => setModalOpen(true)}
+          />
+          <BMI modalOpen={modalOpen} setModalOpen={setModalOpen} />
         </div>
         {/* </div> */}
       </div>
