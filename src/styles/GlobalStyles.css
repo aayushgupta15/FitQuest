@@ -31,7 +31,6 @@ ul li {
 body {
   color: var(--black);
   overflow-x: hidden;
-  font-family: "Playfair Display", "Open Sans", "Montserrat", sans-serif;
 }
 
 strong {

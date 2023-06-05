@@ -5,23 +5,29 @@ import logo from "../images/logo.jpg";
 
 function Navbar() {
   return (
-    <nav className={style.nav__container}>
-      <img src={logo} alt="NA" />
-      <ul>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#features">Features</a>
-        </li>
-        <li>
-          <a href="#service">Services</a>
-        </li>
-        <li>
-          <a href="#footer">Contact Us</a>
-        </li>
-      </ul>
-      <Button type="button" value="Check BMI" variant="primary" />
+    <nav>
+      <div className={style.nav__container}>
+        <a href="#">
+          <img src={logo} alt="NA" />
+        </a>
+        <ul>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#features">Features</a>
+          </li>
+          <li>
+            <a href="#service">Services</a>
+          </li>
+          <li>
+            <a href="#footer">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div className={style.button}>
+        <Button type="button" value="Check BMI" variant="primary" />
+      </div>
     </nav>
   );
 }

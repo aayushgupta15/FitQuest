@@ -7,7 +7,7 @@
 
 .container h1 {
   font-family: "Playfair Display", serif;
-  font-size: 60px;
+  font-size: 3em;
   font-weight: bold;
   line-height: 1em;
   padding: 50px 0;
@@ -20,6 +20,7 @@
 }
 
 .container img {
+  width: 40vw;
   border-radius: 20px;
   box-shadow: 5px 5px 25px rgb(124, 103, 241);
 }
@@ -32,4 +33,10 @@
 
 .right {
   min-width: 250px;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    flex-wrap: wrap;
+  }
 }

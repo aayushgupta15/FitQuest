@@ -6,7 +6,7 @@ function Clients() {
   return (
     <section className={getClasses([style.container, style.container__color])}>
       <h2>What My Clients Say</h2>
-      <strong>_____________</strong>
+      <hr />
       <div className={style.card__container}>
         <div className={style.card}>
           <img src="" alt="NA" />

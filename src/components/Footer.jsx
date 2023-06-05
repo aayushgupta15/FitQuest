@@ -6,7 +6,7 @@ import { GrMail } from "react-icons/gr";
 
 function Footer() {
   return (
-    <footer className={style.center} id="footer">
+    <footer className={style.footer} id="footer">
       {/* company name */}
       <div>
         <img src={logo} alt="NA" />
@@ -33,9 +33,11 @@ function Footer() {
               <BsGithub />
             </a>
           </li>
-          <a href="mailto:aayush61258@gmail.com">
-            <GrMail />
-          </a>
+          <li>
+            <a href="mailto:aayush61258@gmail.com">
+              <GrMail />
+            </a>
+          </li>
         </ul>
       </div>
     </footer>

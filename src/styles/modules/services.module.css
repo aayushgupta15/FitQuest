@@ -1,5 +1,5 @@
 .container {
-  margin-top: 15vh;
+  margin: 10vh 0;
   text-align: center;
   padding: 20px;
 }
@@ -43,7 +43,7 @@
 }
 
 .input {
-  width: 50vw;
+  width: 75vw;
   margin: 20px;
   border-radius: 10px;
   border: 2px solid var(--primary-color);
@@ -51,5 +51,7 @@
 }
 
 #mail {
-  margin-top: 2rem;
+  width: 50vw;
+  margin: 0 auto;
+  margin-top: 1em;
 }
