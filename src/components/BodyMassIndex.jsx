@@ -22,7 +22,9 @@ function BMI({ isOpen, setIsOpen }) {
 
   useEffect(() => {
     setIndex(index);
-    if (index < 18.4) {
+    if (index == -1) {
+      setIsResult(false);
+    } else if (index < 18.4) {
       setFinal("orange");
       setState("An UnderWeight");
     } else {
@@ -51,6 +53,7 @@ function BMI({ isOpen, setIsOpen }) {
     const wt = formJson.weight;
     const ht = formJson.height;
     if (wt === "" || ht === "") {
+      setIndex(-1);
       alert("Height or Weight cannot be 0");
     } else {
       const cal = wt / ht ** 2;
