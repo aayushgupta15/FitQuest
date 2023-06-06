@@ -15,7 +15,7 @@ function Contact() {
         placeholder="Enter your email"
         className={style.input}
       />
-      <Button type="submit" value="Submit" variant="primary" />
+      <Button type="submit">Subscribe for FREE</Button>
     </section>
   );
 }

@@ -1,24 +1,21 @@
-import React from "react";
+import React, { Children } from "react";
 import { getClasses } from "../utils/getClasses";
 import style from "../styles/modules/button.module.css";
 
-function Button(props) {
-  const buttonType = {
-    primary: "primary",
-    secondary: "secondary",
-  };
+const buttonType = {
+  primary: "primary",
+  secondary: "secondary",
+};
 
+function Button({ children, variant = "primary", type, ...rest }) {
   return (
-    <div>
-      <input
-        type={props.type}
-        className={getClasses([
-          style.button,
-          style[`${buttonType[props.variant]}`],
-        ])}
-        value={props.value}
-      />
-    </div>
+    <button
+      className={getClasses([style.button, style[`${buttonType[variant]}`]])}
+      type={type === "submit" ? "submit" : "button"}
+      {...rest}
+    >
+      {children}
+    </button>
   );
 }
 

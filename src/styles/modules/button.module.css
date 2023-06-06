@@ -6,6 +6,7 @@
   cursor: pointer;
   border: none;
   box-shadow: 5px 5px 10px var(--secondary-color);
+  width: fit-content;
 }
 
 .primary {

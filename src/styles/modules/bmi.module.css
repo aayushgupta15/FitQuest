@@ -1,0 +1,15 @@
+.container {
+  margin: 50px auto;
+  width: 300px;
+}
+
+.container label {
+  margin-bottom: 5px;
+}
+
+.container input {
+  padding: 5px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  margin: 5px 0;
+}

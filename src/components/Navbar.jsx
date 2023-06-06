@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../styles/modules/navbar.module.css";
 import Button from "./Button";
 import logo from "../images/logo.jpg";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const modal = (e) => {
+    e.preventDefault();
+    console.log("hello");
+  };
+
   return (
     <nav>
       <div className={style.nav__container}>
@@ -26,7 +33,7 @@ function Navbar() {
           </li>
         </ul>
         <div className={style.button}>
-          <Button type="button" value="Check BMI" variant="primary" />
+          <Button onClick={modal}>Check BMI</Button>
         </div>
         {/* </div> */}
       </div>
