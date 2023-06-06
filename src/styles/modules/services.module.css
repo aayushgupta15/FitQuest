@@ -19,7 +19,7 @@
 }
 
 .card {
-  min-width: 200px;
+  /* min-width: 200px; */
   width: 100%;
   margin-top: 3em;
   border-radius: 1rem;
@@ -28,7 +28,7 @@
 }
 
 .card:hover {
-  scale: 1.01;
+  scale: 1.05;
   cursor: pointer;
 }
 

@@ -15,7 +15,7 @@ function HeroSection() {
             a wide range of programs and services!
           </p>
         </div>
-        <Button type="button" value="Learn More" variant="primary" />
+        <Button>Learn More</Button>
       </div>
       <img src={hero} alt="NA" />
     </section>
