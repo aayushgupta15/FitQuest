@@ -1,19 +1,30 @@
 import React, { useState } from "react";
 import style from "../styles/modules/bmi.module.css";
 import Button from "./Button";
+import { getClasses } from "../utils/getClasses";
 
 function BMI({ isOpen, setIsOpen }) {
   // function to show the bmi
   const [bmi, setBmi] = useState(0);
-  const [green, setGreen] = useState(false);
-  const [red, setRed] = useState(false);
-  const [orange, setOrange] = useState(false);
+  const [final, setFinal] = useState("");
+  // const [green, setGreen] = useState(false);
+  // const [red, setRed] = useState(false);
+  // const [orange, setOrange] = useState(false);
 
   // function to close the modal
-  // const closeModal = () => setIsOpen(false);
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const [isResult, setIsResult] = useState(false);
+
+  const closeResult = () => {
+    setIsResult(false);
+  };
 
   // function to handle the submit
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // read the form data
@@ -26,22 +37,48 @@ function BMI({ isOpen, setIsOpen }) {
     // set the variables
     const w = formJson.weight;
     const h = formJson.height ** 2;
-
-    setBmi(w / h);
-
-    if (bmi < 18) {
-      setRed(true);
-    } else if (18 <= bmi <= 24) {
-      setGreen(true);
+    // error handling
+    if (w === "" || h === "") {
+      closeResult();
+      alert("Height or Weight cannot be 0");
     } else {
-      setOrange(true);
+      await setBmi(w / h);
     }
 
-    // closeModal();
+    if (bmi < 18) {
+      setFinal("green");
+    } else if (18 <= bmi <= 24) {
+      setFinal("orange");
+    } else {
+      setFinal("red");
+    }
+    setIsResult(true);
+    closeModal();
   };
 
   return (
     <div>
+      {isResult && (
+        <section id={style.overlay}>
+          <div className={style.result__container}>
+            <div className={getClasses([style.result, style[`${final}`]])}>
+              <p>
+                {final === "orange" ? "An UnderWeight" : ""}
+                {final === "green" ? "A Healthy" : ""}
+                {final === "red" ? "An OverWeight" : ""} Personality
+              </p>
+              <br />
+              <strong>{bmi.toFixed(2)}</strong>
+              <br />
+              <br />
+              <br />
+              <Button variant="button" onClick={closeResult}>
+                Close
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
       {isOpen && (
         <section id={style.overlay}>
           <div className={style.container}>
@@ -72,18 +109,12 @@ function BMI({ isOpen, setIsOpen }) {
               <br />
               <div className={style.button_container}>
                 <Button type="submit">Check</Button>
-                <Button variant="secondary" onClick={() => setIsOpen(false)}>
+                <Button variant="secondary" onClick={closeModal}>
                   Cancel
                 </Button>
               </div>
             </form>
           </div>
-          {green && (
-            <div className={style.green}>
-              <h2>You are a Healthy Personality</h2>
-              <h4>{bmi}</h4>
-            </div>
-          )}
         </section>
       )}
     </div>
