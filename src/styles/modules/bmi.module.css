@@ -1,15 +1,46 @@
+#overlay {
+  position: fixed;
+  /* display: none; */
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
-  margin: 50px auto;
-  width: 300px;
+  width: 75vw;
+  max-width: 400px;
+  background-color: var(--form);
+  padding: 80px 30px;
+  border-radius: 2em;
+  color: var(--white);
+  text-align: center;
+  box-shadow: 1px 2px 5px 2px var(--white);
 }
 
 .container label {
-  margin-bottom: 5px;
+  margin: 10px;
+  font-size: 18px;
 }
 
 .container input {
-  padding: 5px;
+  padding: 10px;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   margin: 5px 0;
+}
+
+.button_container {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
 }

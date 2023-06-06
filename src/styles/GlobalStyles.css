@@ -17,6 +17,7 @@ font-family: 'Playfair Display', serif;
   --primary-color: rgb(38, 22, 129);
   --secondary-color: #f0f0f8;
   --white: #fdfdfd;
+  --form: rgba(128, 113, 212);
   --black: #2b0849;
 }
 

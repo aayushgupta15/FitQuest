@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import style from "../styles/modules/navbar.module.css";
 import Button from "./Button";
 import logo from "../images/logo.jpg";
+import BMI from "./BodyMassIndex";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const modal = (e) => {
     e.preventDefault();
+    setIsOpen(true);
     console.log("hello");
   };
 
@@ -35,8 +37,8 @@ function Navbar() {
         <div className={style.button}>
           <Button onClick={modal}>Check BMI</Button>
         </div>
-        {/* </div> */}
       </div>
+      <BMI isOpen={isOpen} setIsOpen={setIsOpen} />
     </nav>
   );
 }
