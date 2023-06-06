@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "../styles/modules/bmi.module.css";
 import Button from "./Button";
 import { getClasses } from "../utils/getClasses";
+// import { calculator } from "../utils/calculator";
 
 function BMI({ isOpen, setIsOpen }) {
-  // function to show the bmi
-  const [bmi, setBmi] = useState(0);
-  const [final, setFinal] = useState("");
-  // const [green, setGreen] = useState(false);
-  // const [red, setRed] = useState(false);
-  // const [orange, setOrange] = useState(false);
-
   // function to close the modal
   const closeModal = () => {
     setIsOpen(false);
   };
+
+  const [index, setIndex] = useState(0);
+  // show the result
+  const [final, setFinal] = useState("");
+  const [state, setState] = useState("");
 
   const [isResult, setIsResult] = useState(false);
 
@@ -22,39 +21,48 @@ function BMI({ isOpen, setIsOpen }) {
     setIsResult(false);
   };
 
-  // function to handle the submit
+  useEffect(() => {
+    setIndex(index);
+    if (index < 18.4) {
+      setFinal("orange");
+      setState("An UnderWeight");
+    } else {
+      if (index < 24.5) {
+        setFinal("green");
+        setState("A Normal");
+      } else {
+        setFinal("red");
+        setState("An OverWeight");
+      }
+    }
+    console.log(`from useEffect ${index}`);
+  }, [index]);
 
-  const handleSubmit = async (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
 
     // read the form data
     const form = e.target;
     const formData = new FormData(form);
-    // console
-    const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
 
-    // set the variables
-    const w = formJson.weight;
-    const h = formJson.height ** 2;
-    // error handling
-    if (w === "" || h === "") {
-      closeResult();
+    // storing in json file
+    const formJson = Object.fromEntries(formData.entries());
+
+    // creating corresponding variables
+    const wt = formJson.weight;
+    const ht = formJson.height;
+    if (wt === "" || ht === "") {
       alert("Height or Weight cannot be 0");
     } else {
-      await setBmi(w / h);
-    }
+      const cal = wt / ht ** 2;
 
-    if (bmi < 18) {
-      setFinal("green");
-    } else if (18 <= bmi <= 24) {
-      setFinal("orange");
-    } else {
-      setFinal("red");
+      setIndex(cal.toFixed(2));
     }
+    console.log(`from handle ${index}`);
+
     setIsResult(true);
     closeModal();
-  };
+  }
 
   return (
     <div>
@@ -62,19 +70,16 @@ function BMI({ isOpen, setIsOpen }) {
         <section id={style.overlay}>
           <div className={style.result__container}>
             <div className={getClasses([style.result, style[`${final}`]])}>
-              <p>
-                {final === "orange" ? "An UnderWeight" : ""}
-                {final === "green" ? "A Healthy" : ""}
-                {final === "red" ? "An OverWeight" : ""} Personality
-              </p>
+              <p>{state} Personality</p>
               <br />
-              <strong>{bmi.toFixed(2)}</strong>
+              <strong>{index}</strong>
               <br />
               <br />
               <br />
-              <Button variant="button" onClick={closeResult}>
+              <Button variant="secondary" onClick={closeResult}>
                 Close
               </Button>
+              <Button onClick={() => setIsOpen(true)}>Chec</Button>
             </div>
           </div>
         </section>
@@ -90,18 +95,18 @@ function BMI({ isOpen, setIsOpen }) {
                 name="height"
                 id="height"
                 step="0.01"
-                placeholder="Height in mt"
+                placeholder="Height (in mt)"
               />
               <br />
               <br />
-              <label htmlFor="weight">Weight in kg</label>
+              <label htmlFor="weight">Weight (in kg)</label>
               <br />
               <input
                 type="number"
                 name="weight"
                 id="weight"
                 step="0.01"
-                placeholder="Weight in kg"
+                placeholder="Weight (in kg)"
               />
               <br />
               <br />
