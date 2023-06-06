@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "../styles/modules/navbar.module.css";
 import Button from "./Button";
-import logo from "../images/logo.jpg";
+import logo from "../images/blue.png";
 import BMI from "./BodyMassIndex";
 
 function Navbar() {

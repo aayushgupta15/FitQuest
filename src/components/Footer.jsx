@@ -1,6 +1,6 @@
 import React from "react";
 import style from "../styles/modules/footer.module.css";
-import logo from "../images/logo.jpg";
+import logo from "../images/white.png";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 
