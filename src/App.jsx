@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Clients from "./components/Clients";
 import Footer from "./components/Footer";
+import MyForm from "./components/form";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Clients />
       <Contact />
       <Footer />
+      <MyForm />
     </div>
   );
 }
