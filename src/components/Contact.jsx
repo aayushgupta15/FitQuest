@@ -3,6 +3,12 @@ import Button from "./Button";
 import style from "../styles/modules/services.module.css";
 
 function Contact() {
+  const popUp = () => {
+    alert(
+      "Congratulations!!! You've Successfully Subscribed for Our Newsletter"
+    );
+  };
+
   return (
     <section className={style.container}>
       <h2>Stay In Touch</h2>
@@ -15,7 +21,9 @@ function Contact() {
         placeholder="Enter your email"
         className={style.input}
       />
-      <Button type="submit">Subscribe for FREE</Button>
+      <Button type="submit" onClick={popUp}>
+        Subscribe for FREE
+      </Button>
     </section>
   );
 }

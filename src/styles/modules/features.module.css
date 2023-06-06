@@ -6,6 +6,8 @@
 }
 
 .block__container {
+  display: flex;
+  flex-direction: column;
   margin: 2em auto;
   width: 80vw;
 }
@@ -28,10 +30,19 @@
   margin: 1rem;
 }
 
+@media screen and (min-width: 500px) {
+  .block__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .block {
+    width: 48%;
+  }
+}
+
 @media screen and (min-width: 786px) {
   .block__container {
-    display: flex;
-    justify-content: space-between;
   }
 
   .block__container img {
