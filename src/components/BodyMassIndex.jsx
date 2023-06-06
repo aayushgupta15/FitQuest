@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import style from "../styles/modules/bmi.module.css";
 import Button from "./Button";
 import { getClasses } from "../utils/getClasses";
-// import { calculator } from "../utils/calculator";
 
 function BMI({ isOpen, setIsOpen }) {
   // function to close the modal
@@ -79,7 +78,6 @@ function BMI({ isOpen, setIsOpen }) {
               <Button variant="secondary" onClick={closeResult}>
                 Close
               </Button>
-              <Button onClick={() => setIsOpen(true)}>Chec</Button>
             </div>
           </div>
         </section>

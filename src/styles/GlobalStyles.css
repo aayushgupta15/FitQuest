@@ -35,15 +35,12 @@ ul li {
 body {
   color: var(--black);
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
 strong {
   color: var(--black);
   font-weight: bolder;
-}
-
-h2 {
-  font-family: "Playfair Display", serif;
 }
 
 hr {

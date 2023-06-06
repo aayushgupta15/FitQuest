@@ -18,6 +18,11 @@ function Clients() {
             FitQuest is the perfect fitness company for anyone looking to
             improve their overall health and wellness.
           </p>
+          <br />
+          <br />
+          <hr />
+          <br />
+          <h4>John Doe</h4>
         </div>
         <div className={getClasses([style.card, style.person])}>
           <img src={two} alt="NA" />
@@ -26,6 +31,11 @@ function Clients() {
             effective and enjoyable, making it easy to maintain a healthy
             lifestyle.
           </p>
+          <br />
+          <br />
+          <hr />
+          <br />
+          <h4>Jenna Smith</h4>
         </div>
         <div className={getClasses([style.card, style.person])}>
           <img src={three} alt="NA" />
@@ -33,6 +43,11 @@ function Clients() {
             The certified fitness professionals at FitQuest provided me with the
             guidance and motivation I needed to achieve my fitness goals.
           </p>
+          <br />
+          <br />
+          <hr />
+          <br />
+          <h4>Samuel Stevens</h4>
         </div>
       </div>
     </section>
