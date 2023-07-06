@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import style from "../styles/modules/services.module.css";
 
 function Contact() {
-  const popUp = () => {
-    alert(
-      "Congratulations!!! You've Successfully Subscribed for Our Newsletter"
-    );
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Send the form data to the PHP server
+    fetch("https://localhost:3000/change", {
+      method: "POST",
+      body: new URLSearchParams({ email }),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Registration successful
+          alert("Email address registered successfully");
+          setEmail("");
+        } else {
+          // Handle errors
+          alert("Error registering email address");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("An error occurred");
+      });
   };
 
   return (
@@ -17,12 +40,15 @@ function Contact() {
         Enter your email address to register to our newsletter subscription!
       </p>
       <input
-        type="text"
-        placeholder="Enter your email"
+        type="email"
         className={style.input}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter your email address"
+        required
       />
-      <Button type="submit" onClick={popUp}>
-        Subscribe for FREE
+      <Button type="submit" onClick={handleSubmit}>
+        Subscribe
       </Button>
     </section>
   );
